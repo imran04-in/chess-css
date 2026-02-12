@@ -1,21 +1,76 @@
+@font-face{
+    font-family: Overlock ;
+    src: 
+    local(Overlock),
+    url(fonts/Overlock-Regular.ttf);
+}
+
+@font-face {
+    font-family: Overlock;
+    src: 
+    local(Overlock Bold),
+    url(fonts/Overlock-Bold.ttf);
+    font-weight: bold;
+}
+
+:root{
+    --Clr-accent: hsl(39 100% 41%);
+    --Clr-neutral-100: hsl(0 0% 100%);
+    --Clr-neutral-800: hsl(0 0% 20%);
+
+    --fs-400: 1.125rem;
+    --fs-500: 1.1325rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2.25rem;
+    --fs-800: 3rem;
+
+    --ff-base: system-ui, serif;
+    --ff-accent: Overlock, serif;
+
+}
+
 body{
-    color: hsl(0 0% 20%);
+    color: var(--Clr-neutral-800);
+    font-size: var(--fs-400);
+    line-height: 1.6;
+    font-family: var(--ff-base);
 }
 
 h1,
 h2 {
-    color: hsl(39 100% 41%);
+    color: var(--Clr-accent) ;
+    line-height: 1.2;
+    font-family: var(--ff-accent);
+    font-weight: 700;
+}
+
+h1{
+    font-size: var(--fs-800);
+}
+
+h2{
+    font-size: var(--fs-700);
+}
+
+h3{
+   font-size: var(--fs-600);
 }
 
 h1 span {
-    color: hsl(0 0% 20%);
+    color: var(--Clr-neutral-800);
+    font-size: .75em;
 }
 
 a{
-   color: hsl(39 100% 41%);
+   color: var(--Clr-accent);
 }
 
 a:hover,
 a:focus-visible {
     color: inherit;
 }
+
+.led{
+    font-size: var(--fs-500);
+}
+
