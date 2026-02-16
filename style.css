@@ -1,76 +1,121 @@
-@font-face{
-    font-family: Overlock ;
-    src: 
-    local(Overlock),
-    url(fonts/Overlock-Regular.ttf);
+@font-face {
+font-family: "Overlock";
+src: local("Overlock"), url("../fonts/Overlock-Regular.ttf");
 }
 
 @font-face {
-    font-family: Overlock;
-    src: 
-    local(Overlock Bold),
-    url(fonts/Overlock-Bold.ttf);
-    font-weight: bold;
+font-family: "Overlock";
+src: local("Overlock Bold"), url("../fonts/Overlock-Bold.ttf");
+font-weight: bold;
 }
 
-:root{
-    --Clr-accent: hsl(39 100% 41%);
-    --Clr-neutral-100: hsl(0 0% 100%);
-    --Clr-neutral-800: hsl(0 0% 20%);
+:root {
+--clr-accent-400: hsl(39 100% 41%);
+--Clr-accent-300: hsl(39 94% 57%);
+--clr-neutral-800: hsl(0 0% 20%);
+--Clr-neutral-100: hsl(0 0% 100%);
 
-    --fs-400: 1.125rem;
-    --fs-500: 1.1325rem;
-    --fs-600: 1.5rem;
-    --fs-700: 2.25rem;
-    --fs-800: 3rem;
+--fs-400: 1.125rem;
+--fs-500: 1.3125rem;
+--fs-600: 1.5rem;
+--fs-700: 2.25rem;
+--fs-800: 3rem;
 
-    --ff-base: system-ui, serif;
-    --ff-accent: Overlock, serif;
-
+--ff-base: system-ui, sans-serif;
+--ff-accent: Overlock, serif;
 }
 
-body{
-    color: var(--Clr-neutral-800);
-    font-size: var(--fs-400);
-    line-height: 1.6;
-    font-family: var(--ff-base);
+*{
+  box-sizing: border-box;
+}
+
+body {
+color: var(--clr-black);
+font-size: var(--fs-400);
+font-family: var(--ff-base);
+line-height: 1.6;
+margin: 0;
 }
 
 h1,
 h2 {
-    color: var(--Clr-accent) ;
-    line-height: 1.2;
-    font-family: var(--ff-accent);
-    font-weight: 700;
+color: var(--clr-accent-400);
+font-family: var(--ff-accent);
+line-height: 1.1;
 }
 
-h1{
-    font-size: var(--fs-800);
-}
-
-h2{
-    font-size: var(--fs-700);
-}
-
-h3{
-   font-size: var(--fs-600);
+h1 {
+font-size: var(--fs-800);
 }
 
 h1 span {
-    color: var(--Clr-neutral-800);
-    font-size: .75em;
+display: block;
+font-size: 0.75em;
+font-weight: lighter;
+color: black;
 }
 
-a{
-   color: var(--Clr-accent);
+h2 {
+font-size: var(--fs-700);
+}
+
+h3 {
+font-size: var(--fs-600);
+}
+
+a {
+color: var(--clr-accent-400);
 }
 
 a:hover,
 a:focus-visible {
-    color: inherit;
+color: var(--clr-black);
 }
 
-.led{
-    font-size: var(--fs-500);
+button{
+  font: inherit;
 }
 
+.button{
+  background-color: var(--Clr-accent-300);
+  border: 0;
+  padding: .5em 1.5em;
+}
+
+.button:hover,
+.button:focus-visible {
+  color: var(--Clr-neutral-100);
+  background: var(--clr-neutral-800);
+}
+
+.lede {
+font-size: var(--fs-500);
+}
+
+.hero{
+  background-color: var(--clr-accent-400);
+  padding-block: 100px;
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.hero-content {
+  background-color: var(--Clr-neutral-100);
+  padding: 50px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.page-footer{
+  background-color: var(--clr-neutral-800);
+  padding: 100px;
+  color: var(--Clr-neutral-100);
+  text-align: center;
+}
+
+.middle,
+.footer-content {
+  padding-inline: 1rem;
+  max-inline-size: 900px;
+  margin-inline: auto;
+}
