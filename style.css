@@ -72,6 +72,11 @@ a:focus-visible {
 color: var(--clr-black);
 }
 
+img{
+  max-inline-size: 100%;
+  display: block;
+}
+
 button{
   font: inherit;
 }
@@ -94,20 +99,31 @@ font-size: var(--fs-500);
 
 .hero{
   background-color: var(--clr-accent-400);
+  background-image: url(images/chess-bg.jpg);
+  background-size: cover;
   padding-block: 100px;
   padding-inline: 1rem;
   text-align: center;
 }
 
 .hero-content {
-  background-color: var(--Clr-neutral-100);
+  background-color: hsl(0 0% 100% / 0.7);
   padding: 50px;
   max-width: 900px;
   margin-inline: auto;
 }
 
+.hero-content > :first-child {
+  margin-block-start: 0;
+}
+
+.footer-content > :last-child {
+  margin: block end 0;
+}
+
 .page-footer{
   background-color: var(--clr-neutral-800);
+  background-image: linear-gradient(var(--clr-neutral-800), black);
   padding: 100px;
   color: var(--Clr-neutral-100);
   text-align: center;
@@ -115,6 +131,12 @@ font-size: var(--fs-500);
 
 .middle,
 .footer-content {
+  padding-inline: 1rem;
+  max-inline-size: 900px;
+  margin-inline: auto;
+}
+
+.wrapper {
   padding-inline: 1rem;
   max-inline-size: 900px;
   margin-inline: auto;
