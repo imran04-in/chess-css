@@ -16,14 +16,20 @@
   --Clr-neutral-100: hsl(0 0% 100%);
   --clr-neutral-900: hsl(0 0% 10%);
 
+  --ff-base: system-ui, sans-serif;
+  --ff-accent: Overlock, serif;
+
   --fs-400: 1.125rem;
   --fs-500: 1.3125rem;
   --fs-600: 1.5rem;
   --fs-700: 2.25rem;
   --fs-800: 3rem;
 
-  --ff-base: system-ui, sans-serif;
-  --ff-accent: Overlock, serif;
+  @media (width > 960px) {
+    --fs-600: 2rem;
+    --fs-700: 3rem;
+    --fs-800: 5rem;
+  }
 }
 
 * {
